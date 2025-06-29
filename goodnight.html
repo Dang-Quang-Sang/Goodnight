@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chúc Ngủ Ngon 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @keyframes flyUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-200px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>💤 Chúc bạn ngủ ngon và mơ thật đẹp 💖</h1>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.textContent = "💗";
+      heart.style.position = "absolute";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.bottom = "0px";
+      heart.style.fontSize = "24px";
+      heart.style.animation = "flyUp 2s ease-out forwards";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 2000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
